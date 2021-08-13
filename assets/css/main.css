@@ -1665,3 +1665,115 @@ input, select, textarea {
 			opacity: 0;
 		}
 		
+	/* 3D Cube Carosuel */
+@import url(https://fonts.googleapis.com/css?family=Lato:300|Oswald);
+.container {
+  width: 100%;
+  max-width: 60em;
+  margin: 4em auto 0;
+  /* padding-bottom: 5em; */
+  perspective: 100em;
+  background: blue;
+}
+	.carousel {
+		position: relative;
+		width: 22em;
+		height: 22em;
+		margin: 0 auto;
+		transform-style: preserve-3d;
+		transition: transform 0.5s ease;
+	  }
+	  .carousel[data-slide="1"] {
+		transform: rotateY(0deg);
+	  }
+	  .carousel[data-slide="2"] {
+		transform: rotateY(-90deg);
+	  }
+	  .carousel[data-slide="3"] {
+		transform: rotateY(-180deg);
+	  }
+	  .carousel[data-slide="4"] {
+		transform: rotateY(-270deg);
+	  }
+	  
+	  .carousel__slide {
+		position: absolute;
+		width: 22em;
+		height: 22em;
+		background: white;
+	  }
+	  .carousel__slide img {
+		width: 100%;
+	  }
+	  
+	  .back,
+	  .carousel__slide:nth-child(3) {
+		transform: translateZ(-7.5em) rotateY(180deg);
+	  }
+	  
+	  .right,
+	  .carousel__slide:nth-child(2) {
+		transform: rotateY(-270deg) translateX(7.5em);
+		transform-origin: top right;
+	  }
+	  
+	  .left,
+	  .carousel__slide:nth-child(4) {
+		transform: rotateY(270deg) translateX(-7.5em);
+		transform-origin: center left;
+	  }
+	  
+	  .front,
+	  .carousel__slide:nth-child(1) {
+		transform: translateZ(14.5em);
+	  }
+	  
+	  .next,
+	  .prev {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		width: 3em;
+		border-radius: 3px;
+		text-align: center;
+		background-color: lawngreen;
+		line-height: 3;
+		color: white;
+		transform: translateY(-50%);
+		cursor: pointer;
+		text-transform: uppercase;
+	  }
+	  
+	  .prev {
+		left: 0;
+	  }
+	  /**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before, .carousel__slide:before,
+.cf:after,
+.carousel__slide:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after, .carousel__slide:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf, .carousel__slide {
+  *zoom: 1;
+}
+	  
