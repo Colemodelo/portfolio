@@ -1,6 +1,3 @@
-# coleModelo's Portfolio
-
-## Demo: ##https://colemodelo.github.io/portfolio/
 
 Dimension by HTML5 UP
 html5up.net | @ajlkn
