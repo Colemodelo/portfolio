@@ -1672,7 +1672,6 @@ input, select, textarea {
   margin: 4em auto 0;
   /* padding-bottom: 5em; */
   perspective: 100em;
-  background: blue;
 }
 	.carousel {
 		position: relative;
@@ -1700,6 +1699,7 @@ input, select, textarea {
 		width: 22em;
 		height: 22em;
 		background: white;
+		border: black solid 1px;
 	  }
 	  .carousel__slide img {
 		width: 100%;
@@ -1775,4 +1775,6 @@ input, select, textarea {
 .cf, .carousel__slide {
   *zoom: 1;
 }
-	  
+.carousel-content{
+	border: solid black 2px;
+}
