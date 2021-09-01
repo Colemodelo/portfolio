@@ -1676,7 +1676,7 @@ input, select, textarea {
 	.carousel {
 		position: relative;
 		width: 22em;
-		height: 22em;
+		height: 24em;
 		margin: 0 auto;
 		transform-style: preserve-3d;
 		transition: transform 0.5s ease;
@@ -1698,8 +1698,8 @@ input, select, textarea {
 		position: absolute;
 		width: 22em;
 		height: 22em;
-		background: white;
-		border: black solid 1px;
+		background: rgba(255, 255, 255);
+		border: black solid 1px; 
 	  }
 	  .carousel__slide img {
 		width: 100%;
@@ -1730,12 +1730,10 @@ input, select, textarea {
 	  .next,
 	  .prev {
 		position: absolute;
-		top: 50%;
+		top: 60%;
 		right: 0;
 		width: 3em;
-		border-radius: 3px;
 		text-align: center;
-		background-color: lawngreen;
 		line-height: 3;
 		color: white;
 		transform: translateY(-50%);
@@ -1744,7 +1742,16 @@ input, select, textarea {
 	  }
 	  
 	  .prev {
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
 		left: 0;
+	  }
+	  .next {
+		  border-top-left-radius: 3px;
+		  border-bottom-left-radius: 3px;
+	  }
+	  .prev:hover, .next:hover {
+		  background: rgba(255, 255, 255, 0.075);;
 	  }
 	  /**
  * For modern browsers
