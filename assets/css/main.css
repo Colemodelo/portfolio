@@ -1780,6 +1780,7 @@ input, select, textarea {
   /* 1 */
   display: table;
   /* 2 */
+  position: absolute;
 }
 
 .cf:after, .carousel__slide:after {
