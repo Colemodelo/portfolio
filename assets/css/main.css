@@ -1695,6 +1695,8 @@ input, select, textarea {
 	  }
 	  
 	  .carousel__slide {
+		color: black;
+		text-align: center;
 		position: absolute;
 		width: 22em;
 		height: 22em;
@@ -1735,7 +1737,8 @@ input, select, textarea {
 		width: 3em;
 		text-align: center;
 		line-height: 3;
-		color: white;
+		color: #ffffff;
+		opacity: 0.8;
 		transform: translateY(-50%);
 		cursor: pointer;
 		text-transform: uppercase;
