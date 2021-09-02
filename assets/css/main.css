@@ -23,7 +23,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -1700,7 +1701,7 @@ input, select, textarea {
 		height: 22em;
 		background: rgba(27, 31, 34);
 		border: white solid 1px; 
-		overflow: scroll;
+		overflow-y: auto;
 	  }
 	  .carousel__slide img {
 		width: 80%;
@@ -1712,7 +1713,6 @@ input, select, textarea {
 	  }
 	  .content-logo{
 		  border-bottom: none;
-		  transition: none;
 	  }
 	  
 	  .back,
@@ -1784,6 +1784,7 @@ input, select, textarea {
 
 .cf:after, .carousel__slide:after {
   clear: both;
+  display: none;
 }
 
 /**
