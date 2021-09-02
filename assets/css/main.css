@@ -1701,8 +1701,8 @@ input, select, textarea {
 		height: 22em;
 		background: rgba(27, 31, 34);
 		border: white solid 1px; 
-		overflow-x: hidden;
-		overflow-y: auto;
+		overflow-x: hidden !important;
+		overflow-y: auto !important;
 	  }
 	  .carousel__slide img {
 		width: 80%;
