@@ -1681,6 +1681,7 @@ input, select, textarea {
 		margin: 0 auto;
 		transform-style: preserve-3d;
 		transition: transform 0.5s ease;
+		z-index: -2;
 	  }
 	  .carousel[data-slide="1"] {
 		transform: rotateY(0deg);
@@ -1701,8 +1702,9 @@ input, select, textarea {
 		height: 22em;
 		background: rgba(27, 31, 34);
 		border: white solid 1px; 
-		overflow-x: hidden !important;
-		overflow-y: auto !important;
+		overflow-x: hidden;
+		overflow-y: auto;
+		z-index: -1;
 	  }
 	  .carousel__slide img {
 		width: 80%;
@@ -1720,23 +1722,23 @@ input, select, textarea {
 	  .carousel__slide:nth-child(3) {
 		transform: translateZ(-7.5em) rotateY(180deg);
 	  }
-	  
+
 	  .right,
 	  .carousel__slide:nth-child(2) {
 		transform: rotateY(-270deg) translateX(7.5em);
 		transform-origin: top right;
-	  }
-	  
-	  .left,
-	  .carousel__slide:nth-child(4) {
-		transform: rotateY(270deg) translateX(-7.5em);
-		transform-origin: center left;
-	  }
+	}
 	  
 	  .front,
 	  .carousel__slide:nth-child(1) {
 		transform: translateZ(14.5em);
 	  }
+
+	  .left,
+	  .carousel__slide:nth-child(4) {
+		transform: rotateY(270deg) translateX(-7.5em);
+		transform-origin: center left;
+	}
 	  
 	  .next,
 	  .prev {
@@ -1781,7 +1783,7 @@ input, select, textarea {
   /* 1 */
   display: table;
   /* 2 */
-  position: absolute;
+  position: relative;
 }
 
 .cf:after, .carousel__slide:after {
